@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <style>
+        </style>
+        <script>
+            // TODO: Add code to check answers to questions
+            // question 1
+                // assign correct and incorrect answers to buttons
+                // on click
+                    // the button turns red if incorrect and 'incorrect' appears beneath the question
+                    // the button turns green if correct and 'correct' appears beneath the question
+            function click_correct(button) {
+                let answer = document.querySelector('.MC');
+                answer.innerHTML = `Correct!`;
+                button.style.backgroundColor = "green";
+                button.style.color = "white";
+            }
+
+            function incorrect(button) {
+                let answer = document.querySelector('.MC');
+                answer.innerHTML = `Incorrect.`;
+                button.style.backgroundColor = "red";
+                button.style.color = "white";
+            }
+            // question 2
+                // after the user puts in their answer and presses the check answer button,
+                    // if the answer is wrong the answer box turns red and 'incorrect' appears beneath the question
+                    // if the answer is right the answer box turns green and 'correct' appears beneath the question
+            function correct() {
+                // so we can use inputField to change the textbox color, and input is just another variable that can be used for another purpose
+                let inputField = document.querySelector('#answer')
+                let input = inputField.value.toLowerCase();
+                let answer = document.querySelector('.FR');
+                if (input == 'switzerland') {
+                    answer.innerHTML = `Correct!`;
+                    inputField.style.backgroundColor = 'lightgreen';
+                    inputField.style.color = 'green';
+                }
+                else {
+                    answer.innerHTML = `Incorrect.`;
+                    inputField.style.backgroundColor = 'lightcoral';
+                    inputField.style.color = 'red';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <div></div>
+                <!-- TODO: Add multiple choice question here -->
+                <h3 onsubmit>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <p class="MC"></p>
+                <button onclick="incorrect(this)">6 people per 1 sheep</button>
+                <button onclick="incorrect(this)">3 people per 1 sheep</button>
+                <button onclick="incorrect(this)">1 person per 1 sheep</button>
+                <button onclick="incorrect(this)">1 person per 3 sheep</button>
+                <button onclick="click_correct(this)">1 person per 6 sheep</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <div></div>
+                <!-- TODO: Add free response question here -->
+                <h3>In which country is it illegal to own only one guinea pig, as a lone ginuea pig might get lonely?</h3>
+                <p class="FR"></p>
+                <form onsubmit="correct(this); return false;">
+                    <input autocomplete="off" autofocus id="answer" placeholder="Country Name" type="text">
+                    <button>Check Answer</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

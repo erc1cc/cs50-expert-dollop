@@ -1,0 +1,10 @@
+HTML Tags (besides <html>, <head>, <body>, and <title>):
+h1, h2, h3, h4, a, div, p, ul, li, hr
+
+CSS Properties:
+display, width, height, background-color, margin, text-align, color, border
+
+
+I chose to use Javascript and Bootstrap by using a List group and custom focus ring.
+I used the list group feature so that the aesthetics of finding each unit page would look more sophisticated but also easier to navigate.
+I used the custom focus ring feature to make everything more visally aesthetic

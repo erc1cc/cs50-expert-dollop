@@ -1,0 +1,29 @@
+The THIEF is: Bruce
+The city the thief ESCAPED TO: New York City
+The ACCOMPLICE is: Robin
+
+
+
+
+
+
+the theft took place on July 28, 2024 and that it took place on Humphrey Street. @ the bakery, 10:15am
+- id of the crime is 295
+
+the thief left the bakery within 10 minutes of the theft - Ruth
+theif was withdrawing money from the ATM on Legget theif before I arrived at the bakery - Eugene
+The theif calls someone for less than a minute and gets an airplane ticket for the earliest flight out of Fiftyville tomorrow - Raymond
+
+The theif left from Fiftyville at 8:20am the following day, flight_id = 36, origin_airport_id = 8, desination_airport_id = 4
+
+possible culprits' passport_number
+7214083635
+1695452385
+5773159633
+1540955065
+8294398571
+1988161715
+9878712108
+8496433585
+
+the theft occurred at 10:15, and Bruce was the only one who left the bakery within 10 minutes of that time

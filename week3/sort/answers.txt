@@ -1,0 +1,26 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Bubble sort takes the longest out of all 3 sorting algorithms
+
+sort2 uses: Merge Sort
+
+How do you know?: Merge sort is the fastest out of all 3 sorting algorithms
+
+sort3 uses: Selection Sort
+
+How do you know?: Selection sort is slower than merge sort but faster than bubble sort
+
+
+time:
+sort1 random5000: 0.084s
+sort2 random5000: 0.027s
+sort3 random5000: 0.054s
+
+sort1 random10000: 0.215s
+sort2 random10000: 0.091s
+sort3 random10000: 0.133s
+
+sort1 random50000: 5.752s
+sort2 random50000: 0.744s
+sort3 random50000: 2.392s
+

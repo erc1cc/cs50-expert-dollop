@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<h1>Transaction History for {{ users["username"] }}</h1>
+<hr>
+<table>
+    <thead>
+        <tr>
+            <th>Stock</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Value</th>
+            <th>Type of Transaction</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- TODO: Loop through the database entries to display them in this table -->
+        {% for data in stocks %}
+        <tr>
+            <td>{{ data["symbol"] }}</td>
+            <td>{{ data["shares"] }}</td>
+            <td>{{ data["price"] | usd }}</td>
+            <td>{{ data["value"] | usd }}</td>
+            <td>{{ data["type"] }}</td>
+            <td>{{ data["timestamp"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

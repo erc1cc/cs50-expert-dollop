@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+<h1>Stock Info for {{ users["username"] }}</h1>
+<h2 style="text-align:left;">Cash Balance: {{ users["cash"] | usd }}</h2>
+<h2 style="text-align:left;">Total Valuation: {{ valuation | usd}}</h2>
+<hr>
+<table>
+    <thead>
+        <tr>
+            <th>Stocks</th>
+            <th>Price</th>
+            <th>Shares</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- TODO: Loop through the database entries to display them in this table -->
+        {% for data in stocks %}
+        <tr>
+            <td>{{ data["symbol"] }}</td>
+            <td>{{ data["price"] | usd }}</td>
+            <td>{{ data["shares"] }}</td>
+            <td>{{ data["value"] | usd }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

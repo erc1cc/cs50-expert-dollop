@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!-- TODO: new page for history, history SQL databse, clear history, login -->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <title>Calculator Project</title>
+    </head>
+    <body style="background-color: #808080">
+        <div class="header">
+            <h1>CS50: Calculator</h1>
+        </div>
+
+        <main>
+            <div id="calculator">
+            <hr>
+            <input id="display" readonly>
+            <div id="keys">
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+                <button id="=" onclick="calculate()">=</button>
+            </div>
+        </div>
+        <hr>
+
+        <h2>History</h2>
+        <div id="history"></div>
+
+        <hr>
+        <h2>Extra calculator features:</h2>
+        <ul>
+            <li>History</li>
+            <li>button sound effects</li>
+            <li>easter eggs</li>
+            <li>personalization</li>
+        </ul>
+
+        </main>
+
+        <!-- only this type of 'src' works with flask, remember that -->
+        <audio id="click-sound" src="{{ url_for('static', filename='click.wav') }}"></audio>
+        <script src="{{ url_for('static', filename='calculator.js') }}"></script>
+
+        <hr>
+        <footer style="text-align:center; color:white; padding:10px;">
+            Copyright &#169; 2025 Eric Sun LLC All rights reserved.
+        </footer>
+    </body>
+</html>

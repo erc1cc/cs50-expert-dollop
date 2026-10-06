@@ -1,0 +1,5 @@
+1. We could categorize different categories of audio aura, depending on if their
+average valence, energy, and danceability of their top 100 songs is between a certain range.
+2. Some listeners might not actually listen to those songs and accidentally leave it on repeat when they sleep,
+or someone else is using their account, etc. A better way is maybe accounting for all the factors, like number of times
+repeated in the way, and their listening patterns.
